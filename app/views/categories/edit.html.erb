@@ -1,0 +1,22 @@
+<h1>Categories#edit</h1>
+
+
+<%=form_for @categorie do |f| %>
+
+<div class="form-group">
+  <%=f.text_field :name, class:'form-control' %>
+</div>
+
+<div class="form-group">
+  <%=f.text_field :slug, placeholder:'Slug', class:'form-control'%>
+</div>
+
+<div class="form-group">
+  <button type="submit"class="btn btn-primary" >Submit</button>
+  <a href="<%=categories_path%>" class="btn btn-success" >Retour</a>
+</div>
+  <p>
+lorem</p>
+
+
+<%end%>

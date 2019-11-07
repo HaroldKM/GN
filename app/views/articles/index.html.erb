@@ -1,0 +1,19 @@
+<h1>Articles#index</h1>
+<% @article.each do |article| %>
+
+<h3><%=article.title%></h3>
+
+<p>
+  <a href="<%=article_path(article.id)%>" class="btn btn-primary">Voir la suite</a>
+
+  <a href="<%=edit_article_path(article.id)%>" class="btn btn-default">Editer</a>
+
+  <a href="<%=article_path(article.id)%>" class="btn btn-danger" data-confirm="ok?" data-method="DELETE">Supprimer</a>
+
+</p>
+
+<%end%>
+
+<p>
+  <a href="<%=new_article_path%>" class="btn btn-success">Créer un article</a>
+</p>

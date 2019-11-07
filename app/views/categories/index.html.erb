@@ -1,0 +1,24 @@
+<h1>Categories</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Nom</td>
+      <td>Action</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%@categorie.each do |categorie|%>
+    <tr>
+      <td><%=categorie.name %></td>
+      <td><%=categorie.slug %></td>
+      <td> <a href="<%=edit_category_path(categorie.id)%>" class="btn btn-primary">Editer</a> </td>
+      <td> <a href="<%=category_path(categorie.id)%>" class="btn btn-danger" data-confirm="sur ?" data-method="DELETE">Supprimer</a> </td>
+   </tr>
+    <%end%>
+    <tr>
+      <td> <a href="<%=new_category_path%>" class="btn btn-success"> Créer</a> </td>
+    </tr>
+  </tbody>
+</table>
